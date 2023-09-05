@@ -50,10 +50,11 @@ class DataReader:
                         mask = cacheData["/mask"][:]
                         lat = cacheData["/lat"][:]
                         lon = cacheData["/lon"][:]
-                        if lat != dstLatitude or lon != dstLongitude:
+                        if np.nanmax(np.abs(lat - dstLatitude)) < 1e-5 and np.nanmax(np.abs(lon - dstLongitude)) < 1e-5:
+                            data = np.ma.masked_array(data, mask)
+                            cacheData.close()
+                        else:
                             raise Exception
-                        data = np.ma.masked_array(data, mask)
-                        cacheData.close()
                     except Exception as e:
                         data, lat, lon = self.getData(bandData)
                         data, dstLatitude, dstLongitude = self.bilinearInterpolate(data, lat, lon, dstLatitude, dstLongitude,

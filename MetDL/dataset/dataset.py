@@ -213,8 +213,8 @@ class Dataset(data.dataset.Dataset):
         return True
 
     def getDataShape(self, item):
-        windowStartWidth = self.stride * (item // (len(self.datas) - self.sequenceLength + 1) % self.windowXNum)
-        windowStartHeight = self.stride * (item // (len(self.datas) - self.sequenceLength + 1) // self.windowYNum)
+        windowStartWidth = self.stride * (item % (self.windowXNum * self.windowYNum) % self.windowXNum)
+        windowStartHeight = self.stride * (item % (self.windowXNum * self.windowYNum) // self.windowYNum)
         imageIndex = item // self.windowNum
         data = np.zeros((self.sequenceLength, len(self.datas[0]), self.windowHeight, self.windowWidth))
         mask = np.zeros((self.sequenceLength, len(self.datas[0]), self.windowHeight, self.windowWidth))
@@ -373,7 +373,6 @@ class Dataset(data.dataset.Dataset):
             is_numpy: 반환 Data의 numpy array 사용 여부
         """
         window_start_width, window_start_height, img_idx, data, mask = self.getDataShape(item)
-
         for data_idx in range(img_idx, img_idx + self.sequenceLength):
             for band_idx, band_data in enumerate(self.datas[data_idx]):
                 data_reader = self.dataReaders[band_data["type"]]
@@ -398,18 +397,18 @@ class Dataset(data.dataset.Dataset):
                     pre_band_data = band_data.copy()
                     pre_band_data["dataPath"] = band_data["dataPath"].split(":")[0]
                     pre_processed_data, _ = \
-                        data_reader.get(self.dateTimes[img_idx], pre_band_data, dstLatitude, dstLongitude,
+                        data_reader.get(self.dateTimes[data_idx], pre_band_data, dstLatitude, dstLongitude,
                                         self.interpolateMethod)
                     post_band_data = band_data.copy()
                     post_band_data["dataPath"] = band_data["dataPath"].split(":")[1]
                     post_processed_data, _ = \
-                        data_reader.get(self.dateTimes[img_idx], post_band_data, dstLatitude, dstLongitude,
+                        data_reader.get(self.dateTimes[data_idx], post_band_data, dstLatitude, dstLongitude,
                                         self.interpolateMethod)
                     processed_data = self.timeInterpolate(pre_processed_data, post_processed_data)
                     processed_mask = np.full(processed_data.shape, 1)
                 else:
                     processed_data, processed_mask = \
-                        data_reader.get(self.dateTimes[img_idx], band_data, dstLatitude, dstLongitude, self.interpolateMethod)
+                        data_reader.get(self.dateTimes[data_idx], band_data, dstLatitude, dstLongitude, self.interpolateMethod)
 
                 if processed_data.shape == self.processedShape:
                     data[data_idx - img_idx, band_idx, :, :] = (processed_data

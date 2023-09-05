@@ -73,20 +73,20 @@ class GRIB2Reader(DataReader):
         for modules in __import__('pkg_resources').working_set.__dict__:
             if 'pygrib' in __import__('pkg_resources').working_set.__dict__[modules]:
                 exist = True
-        if len(self.rawData) == 0:
-            if exist:
-                import pygrib
-                grbs = pygrib.open(dataPath)
-                for grb in grbs:
-                    rawData = grb.values
-                    if not isinstance(rawData, np.ma.masked_array):
-                        rawData = np.ma.masked_array(rawData, np.full(rawData.shape, False))
-                    self.rawData.append(rawData)
-                lat, lon = grb.latlons()
-                lon[lon > 180] -= 360
-            else:
-                raise NotImplementedError
-            self.getGeotable(lat, lon)
+        if exist:
+            import pygrib
+            grbs = pygrib.open(dataPath)
+            self.rawData = []
+            for grb in grbs:
+                rawData = grb.values
+                if not isinstance(rawData, np.ma.masked_array):
+                    rawData = np.ma.masked_array(rawData, np.full(rawData.shape, False))
+                self.rawData.append(rawData)
+            lat, lon = grb.latlons()
+            lon[lon > 180] -= 360
+        else:
+            raise NotImplementedError
+        self.getGeotable(lat, lon)
         return self.data
 
     def close(self):
@@ -101,4 +101,5 @@ class GRIB2Reader(DataReader):
         data = self.open(bandData["dataPath"])
         assert int(bandData["itemPath"]) < len(data), 'LDAPS/GDAPS band path must be smaller than band count'
         data = data[int(bandData["itemPath"])]
+        print(int(bandData["itemPath"]))
         return data, self.latGrid, self.lonGrid

@@ -1,0 +1,14 @@
+certifi>=2021.5.30
+cftime>=1.5.0
+netCDF4>=1.5.4
+numpy>=1.9.0
+scipy>=1.5.2
+Pillow>=8.3.1
+PyYAML==5.4.1
+torch>=1.7.1
+torchvision>=0.8.2
+typing-extensions
+h5df>=0.1.5
+h5py>=2.10.0
+pandas>=1.3.1
+openpyxl>=3.0.9

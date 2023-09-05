@@ -1,0 +1,59 @@
+---
+global:
+  time:
+    time_start: "20210904_0000"
+    time_end: "20210904_0000"
+    t_parser: "%Y%m%d_%H%M"
+    timedelta: 10
+
+  subset:
+    max_lat: 0.00
+    min_lat: -60.00
+    max_lon: 200.00
+    min_lon: 160.00
+
+  remove_nan: False
+
+input:
+  ECMWF:
+    TYPE: ECMWF
+    DATA_FOLDER: "/hdd_ext/ALPHA_data/ERA5/"
+    PRODUCTS:
+      ir087:
+        FILE_FORMAT: "ERA5_reprocessed_MET_%Y%m%d%H%M.grib"
+        BAND:
+          v10:
+            item_path: "10 metre V wind component"
+            pixel_number: 1440
+            line_number: 721
+          u10:
+            item_path: "10 metre U wind component"
+            pixel_number: 1440
+            line_number: 721
+          msl:
+            item_path: "Mean sea level pressure"
+            pixel_number: 1440
+            line_number: 721
+          tco3:
+            item_path: "Total column ozone"
+            pixel_number: 1440
+            line_number: 721
+          tcwv:
+            item_path: "Total column water vapour"
+            pixel_number: 1440
+            line_number: 721
+
+output:
+  interpolate_method: 'nearest'
+  pixel_number: 2000
+  line_number: 2000
+  sequence_length: 1
+  cache: "/hdd_ext/ALPHA/save/datareader_GK2A"
+  use_cache: false
+  save_cache: true
+  cache_queue: 10
+  batch_size: 1
+  window:
+    width: 128
+    height: 128
+    stride: 64

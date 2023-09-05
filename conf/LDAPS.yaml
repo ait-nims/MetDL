@@ -1,0 +1,10 @@
+---
+LDAPS:
+  TYPE: LDAPS
+  DATA_FOLDER: "/hdd_ext/ALPHA_data/LDAPS/"
+  PRODUCTS:
+    CSV:
+      FILE_FORMAT: "l015_v070_tmpr_p975_h002.%Y%m%d%H.gb2"
+      BAND:
+        1:
+          item_path: "1"

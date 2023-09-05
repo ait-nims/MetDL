@@ -1,0 +1,104 @@
+---
+GK2A_AMI:
+  TYPE: GK2A_AMI
+  DATA_FOLDER: "/hdd_ext/ALPHA_data/GK2A_AMI_L1B/"
+  DQF: [2, 3]
+#  calibration_type: DN
+  calibration_type: Rad
+  PRODUCTS:
+    ir087:
+      FILE_FORMAT: "gk2a_ami_le1b_ir087_fd020ge_%Y%m%d%H%M.nc"
+      BAND:
+        ir087:
+          item_path: "image_pixel_values"
+          fill_value: 0
+#    ir096:
+#      FILE_FORMAT: "gk2a_ami_le1b_ir096_fd020ge_%Y%m%d%H%M.nc"
+#      BAND:
+#        ir096:
+#          item_path: "image_pixel_values"
+#          fill_value: median
+#    ir105:
+#      FILE_FORMAT: "gk2a_ami_le1b_ir105_fd020ge_%Y%m%d%H%M.nc"
+#      BAND:
+#        ir105:
+#          item_path: "image_pixel_values"
+#          fill_value: median
+#    ir112:
+#      FILE_FORMAT: "gk2a_ami_le1b_ir112_fd020ge_%Y%m%d%H%M.nc"
+#      BAND:
+#        ir112:
+#          item_path: "image_pixel_values"
+#          fill_value: median
+#    ir123:
+#      FILE_FORMAT: "gk2a_ami_le1b_ir123_fd020ge_%Y%m%d%H%M.nc"
+#      BAND:
+#        ir123:
+#          item_path: "image_pixel_values"
+#          fill_value: median
+#    ir133:
+#      FILE_FORMAT: "gk2a_ami_le1b_ir133_fd020ge_%Y%m%d%H%M.nc"
+#      BAND:
+#        ir133:
+#          item_path: "image_pixel_values"
+#          fill_value: median
+#    nr013:
+#      FILE_FORMAT: "gk2a_ami_le1b_nr013_fd020ge_%Y%m%d%H%M.nc"
+#      BAND:
+#        nr013:
+#          item_path: "image_pixel_values"
+#          fill_value: median
+#    nr016:
+#      FILE_FORMAT: "gk2a_ami_le1b_nr016_fd020ge_%Y%m%d%H%M.nc"
+#      BAND:
+#        nr016:
+#          item_path: "image_pixel_values"
+#          fill_value: median
+#    sw038:
+#      FILE_FORMAT: "gk2a_ami_le1b_sw038_fd020ge_%Y%m%d%H%M.nc"
+#      BAND:
+#        sw038:
+#          item_path: "image_pixel_values"
+#          fill_value: median
+#    vi004:
+#      FILE_FORMAT: "gk2a_ami_le1b_vi004_fd010ge_%Y%m%d%H%M.nc"
+#      BAND:
+#        vi004:
+#          item_path: "image_pixel_values"
+#          fill_value: median
+#    vi005:
+#      FILE_FORMAT: "gk2a_ami_le1b_vi005_fd010ge_%Y%m%d%H%M.nc"
+#      BAND:
+#        vi005:
+#          item_path: "image_pixel_values"
+#          fill_value: median
+##    vi006:
+##      FILE_FORMAT: "gk2a_ami_le1b_vi006_fd005ge_%Y%m%d%H%M.nc"
+##      BAND:
+##        vi006:
+##          item_path: "image_pixel_values"
+##          fill_value: median
+#    vi008:
+#      FILE_FORMAT: "gk2a_ami_le1b_vi008_fd010ge_%Y%m%d%H%M.nc"
+#      BAND:
+#        vi008:
+#          item_path: "image_pixel_values"
+#          fill_value: median
+#    wv063:
+#      FILE_FORMAT: "gk2a_ami_le1b_wv063_fd020ge_%Y%m%d%H%M.nc"
+#      BAND:
+#        wv063:
+#          item_path: "image_pixel_values"
+#          fill_value: median
+#    wv069:
+#      FILE_FORMAT: "gk2a_ami_le1b_wv069_fd020ge_%Y%m%d%H%M.nc"
+#      BAND:
+#        wv069:
+#          item_path: "image_pixel_values"
+#          fill_value: median
+#    wv073:
+#      FILE_FORMAT: "gk2a_ami_le1b_wv073_fd020ge_%Y%m%d%H%M.nc"
+#      BAND:
+#        wv073:
+#          item_path: "image_pixel_values"
+#          fill_value: median

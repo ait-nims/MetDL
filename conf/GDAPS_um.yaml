@@ -1,0 +1,55 @@
+---
+GDAPS:
+  TYPE: GDAPS_UM
+  DATA_FOLDER: "/hdd_ext/ALPHA_data/GDAPS_um/"
+  PRODUCTS:
+    G100_PRES:
+      FILE_FORMAT: "g100_v070_erea_pres_h000.2022020700.gb2"
+      BAND:
+        1:
+          item_path: "1"
+    G100_UNIS:
+      FILE_FORMAT: "g100_v070_erea_unis_h000.2022020700.gb2"
+      BAND:
+        1:
+          item_path: "6"
+    G120_PRES:
+      FILE_FORMAT: "g120_v070_erea_pres_h000.2022020700.gb2"
+      BAND:
+        1:
+          item_path: "3"
+    G120_UNIS:
+      FILE_FORMAT: "g120_v070_erea_unis_h000.2022020700.gb2"
+      BAND:
+        1:
+          item_path: "6"
+    G128_PRES:
+      FILE_FORMAT: "g128_v070_ergl_pres_h000.2022020700.gb2"
+      BAND:
+        1:
+          item_path: "1"
+    G128_UNIS:
+      FILE_FORMAT: "g128_v070_ergl_unis_h000.2022020700.gb2"
+      BAND:
+        1:
+          item_path: "6"
+    G512_PRES:
+      FILE_FORMAT: "g512_v070_ergl_pres_h000.2022020700.gb2"
+      BAND:
+        1:
+          item_path: "1"
+    G512_UNIS:
+      FILE_FORMAT: "g512_v070_ergl_unis_h000.2022020700.gb2"
+      BAND:
+        1:
+          item_path: "6"
+    G768_PRES:
+      FILE_FORMAT: "g768_v070_ergl_pres_h000.2022020700.gb2"
+      BAND:
+        1:
+          item_path: "1"
+    G768_UNIS:
+      FILE_FORMAT: "g768_v070_ergl_unis_h000.2022020700.gb2"
+      BAND:
+        1:
+          item_path: "6"

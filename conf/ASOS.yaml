@@ -1,0 +1,45 @@
+---
+global:
+  time:
+    time_start: "20211001_0001"
+    time_end: "20211001_0002"
+    t_parser: "%Y%m%d_%H%M"
+    timedelta: 1
+
+  subset:
+    max_lat: 38.8
+    min_lat: 33.0
+    max_lon: 131.0
+    min_lon: 124.5
+
+  remove_nan: False
+
+input:
+  ASOS:
+    TYPE: ASOS
+    DATA_FOLDER: "/hdd_ext/ALPHA_data/ASOS/"
+    PRODUCTS:
+      CSV:
+        FILE_FORMAT: "%Y%m"
+        BAND:
+          1:
+            item_path: "기온(°C)"
+            pixel_number: 580
+            line_number: 650
+          2:
+            item_path: "누적강수량(mm)"
+            pixel_number: 580
+            line_number: 650
+
+output:
+  interpolate_method: 'nearest'
+  pixel_number: 1000
+  line_number: 1000
+  sequence_length: 2
+  cache: "/hdd_ext/ALPHA/save/datareader_ASOS"
+  cache_queue: 1000
+  batch_size: 1
+  window:
+    width: 500
+    height: 500
+    stride: 500

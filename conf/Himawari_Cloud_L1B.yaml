@@ -1,0 +1,85 @@
+---
+HIMAWARI:
+  TYPE: HIMAWARI_CLOUD
+  DATA_FOLDER: "/hdd_ext/ALPHA_data/HSD2NC/data/ftp.ptree.jaxa.jp/jma/hsd/"
+  PRODUCTS:
+    albedo_01:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B01_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/albedo"
+    albedo_02:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B02_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/albedo"
+    albedo_03:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B03_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/albedo"
+    albedo_04:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B04_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/albedo"
+    albedo_05:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B05_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/albedo"
+    albedo_06:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B06_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/albedo"
+    tbb_07:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B07_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/tbb"
+    tbb_08:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B08_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/tbb"
+    tbb_09:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B09_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/tbb"
+    tbb_10:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B10_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/tbb"
+    tbb_11:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B11_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/tbb"
+    tbb_12:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B12_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/tbb"
+    tbb_13:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B13_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/tbb"
+    tbb_14:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B14_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/tbb"
+    tbb_15:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B15_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/tbb"
+    tbb_16:
+      FILE_FORMAT: "%Y%m/%d/%H/HS_H08_%Y%m%d_%H%M_B16_FLDK.nc"
+      BAND:
+        ALBEDO:
+          item_path: "/tbb"

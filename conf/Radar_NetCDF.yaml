@@ -1,0 +1,10 @@
+---
+RADAR_WISSDOM:
+  TYPE: RADAR_NETCDF
+  DATA_FOLDER: "/hdd_ext/ALPHA_data/RADAR/WISSDOM"
+  PRODUCTS:
+    HSR_01:
+      FILE_FORMAT: "RDR_R3D_KMA_WD_202203010000.nc"
+      BAND:
+        ALBEDO:
+          item_path: "u_component_0"

@@ -1,0 +1,15 @@
+---
+RADAR_CMP:
+  TYPE: RADAR_CMP
+  DATA_FOLDER: "/hdd_ext/ALPHA_data/RADAR"
+  PRODUCTS:
+    HCI:
+      FILE_FORMAT: "HCI/RDR_CMP_HCI_KMA_202203010000.bin.gz"
+      BAND:
+        ALBEDO:
+          item_path: "0_0"
+    HSR:
+      FILE_FORMAT: "HSR/RDR_CMP_HSR_KMA_202203010000.bin.gz"
+      BAND:
+        ALBEDO:
+          item_path: "0_0"

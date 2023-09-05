@@ -1,0 +1,45 @@
+---
+GDAPS:
+  TYPE: GDAPS_KIM
+  DATA_FOLDER: "/hdd_ext/ALPHA_data/GDAPS_kim/"
+  PRODUCTS:
+    G120_PRES:
+      FILE_FORMAT: "kim_g120_ne36_pres_h000.%Y%m%d%H.gb2"
+      BAND:
+        1:
+          item_path: "1"
+    G120_UNIS:
+      FILE_FORMAT: "kim_g120_ne36_unis_h000.%Y%m%d%H.gb2"
+      BAND:
+        1:
+          item_path: "6"
+    G128_HKOR_PRES:
+      FILE_FORMAT: "kim_g128_hkor_pres_h000.%Y%m%d%H.gb2"
+      BAND:
+        1:
+          item_path: "1"
+    G128_HKOR_UNIS:
+      FILE_FORMAT: "kim_g128_hkor_unis_h000.%Y%m%d%H.gb2"
+      BAND:
+        1:
+          item_path: "6"
+    G128_NE36_PRES:
+      FILE_FORMAT: "kim_g128_ne36_pres_h000.%Y%m%d%H.gb2"
+      BAND:
+        1:
+          item_path: "1"
+    G128_NE36_UNIS:
+      FILE_FORMAT: "kim_g128_ne36_unis_h000.%Y%m%d%H.gb2"
+      BAND:
+        1:
+          item_path: "6"
+    G512_PRES:
+      FILE_FORMAT: "kim_g512_ne36_pres_h000.%Y%m%d%H.gb2"
+      BAND:
+        1:
+          item_path: "1"
+    G512_UNIS:
+      FILE_FORMAT: "kim_g512_ne36_unis_h000.%Y%m%d%H.gb2"
+      BAND:
+        1:
+          item_path: "6"

@@ -13,7 +13,7 @@ AI 연구를 위한 기상 데이터 입력 편의성을 위해 고안된 파이
 - Himawari Cloud L1B
 - Radar
 
-*입력자료 설정파일은 conf/ 디렉토리를 참조
+*입력자료 설정파일은 conf/ 디렉토리를 참조<br>
 자세한 사용 방법은 PDF 파일을 참조하시기 바랍니다.
 
 ---
@@ -31,9 +31,9 @@ The library can read the following data:
 - GK2A L1B data
 - Himawari Cloud L1B data
 - Radar data
-*Configuration files for input data can be found in the conf/ directory.
+* Configuration files for input data can be found in the conf/ directory.
 
-For detailed usage instructions, please refer to the PDF file.
+<br>For detailed usage instructions, please refer to the PDF file.
 
 
 

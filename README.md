@@ -1,5 +1,5 @@
 # MetDL 
-MetDL 라이브러리는 **AI 예보지원 및 활용기술 개발 2022** (국립기상과학원) 과제의 일환으로 개발되었습니다.
+MetDL 라이브러리는 **AI 기반 예보지원 솔루션 개발 2022** (국립기상과학원) 과제의 일환으로 개발되었습니다.
 AI 연구를 위한 기상 데이터 입력 편의성을 위해 고안된 파이썬 라이브러리입니다.
 
 본 라이브러리에서 읽을 수 있는 자료는 다음과 같습니다.
@@ -15,9 +15,13 @@ AI 연구를 위한 기상 데이터 입력 편의성을 위해 고안된 파이
 
 *입력자료 설정파일은 conf/ 디렉토리를 참조<br>
 자세한 사용 방법은 PDF 파일을 참조하시기 바랍니다.
-
+<br>
+- 과제 정보: AI 기반 예보지원 솔루션 개발
+- 과제 수행 기간: 2022년 1월 1일 ~ 12월15일
+- 수행사: 쎄트렉아이컨소시엄
+- 발주처: 국립기상과학원, 기상청
 ---
-The MetDL library was developed as part of **the Development Intelligent Assistant Techniques and its Application for Weather Forcasting Process in 2022** by the National Institute of Meteorological Sciences.
+The MetDL library was developed as part of **the Development of Intelligent Assistant Techniques and its Application for Weather Forcasting Process in 2022** by the National Institute of Meteorological Sciences.
 
 It was a python library that designed to enhance the convenience of accessing meteorological data for AI research.
 
